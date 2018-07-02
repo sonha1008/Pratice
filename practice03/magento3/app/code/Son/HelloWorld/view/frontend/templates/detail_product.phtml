@@ -1,0 +1,126 @@
+<div class="product-info col-sm-7">
+					                    
+			
+													<p class="availability in-stock"><span class="iconorange">ON BACKORDER</span></p>
+						<p class="order_ship"><span class="paddingtop"><span class="icon iconorange">icon</span>Available for order (ships 2-3 weeks)</span>
+						<abbr title="<p>This item is on the way from our supplier and will be delivered to our warehouse shortly.</p>
+<p>You may order now and it will be delivered as soon as it arrives in our warehouse.</p>
+<p>You will be periodically updated&nbsp;on the delivery progress and you may cancel your order at anytime.</p>" rel="tooltip"><i class="fa fa-question-circle fa-lg" aria-hidden="true"></i></abbr>
+						</p>
+									
+<script type="text/javascript">
+//<![CDATA[
+		/*
+			TOOLTIP
+		*/
+
+		jQuery( document ).ready( function()
+		{
+			var targets = jQuery( '[rel~=tooltip]' ),
+				target	= false,
+				tooltip = false,
+				title	= false;
+
+			targets.bind( 'mouseenter', function()
+			{
+				target	= jQuery( this );
+				tip		= target.attr( 'title' );
+				tooltip	= jQuery( '<div id="tooltip"></div>' );
+
+				if( !tip || tip == '' )
+					return false;
+
+				target.removeAttr( 'title' );
+				tooltip.css( 'opacity', 0 )
+					   .html( tip )
+					   .appendTo( 'body' );
+
+				var init_tooltip = function()
+				{
+					if( jQuery( window ).width() < tooltip.outerWidth() * 1.5 )
+						tooltip.css( 'max-width', jQuery( window ).width() / 2 );
+					else
+						tooltip.css( 'max-width', 360 );
+
+					var pos_left = target.offset().left + ( target.outerWidth() / 2 ) - ( tooltip.outerWidth() / 2 ),
+						pos_top	 = target.offset().top - tooltip.outerHeight() - 20;
+
+					if( pos_left < 0 )
+					{
+						pos_left = target.offset().left + target.outerWidth() / 2 - 20;
+						tooltip.addClass( 'left' );
+					}
+					else
+						tooltip.removeClass( 'left' );
+
+					if( pos_left + tooltip.outerWidth() > jQuery( window ).width() )
+					{
+						pos_left = target.offset().left - tooltip.outerWidth() + target.outerWidth() / 2 + 20;
+						tooltip.addClass( 'right' );
+					}
+					else
+						tooltip.removeClass( 'right' );
+
+					if( pos_top < 0 )
+					{
+						var pos_top	 = target.offset().top + target.outerHeight();
+						tooltip.addClass( 'top' );
+					}
+					else
+						tooltip.removeClass( 'top' );
+
+					tooltip.css( { left: pos_left, top: pos_top } )
+						   .animate( { top: '+=10', opacity: 1 }, 50 );
+				};
+
+				init_tooltip();
+				jQuery( window ).resize( init_tooltip );
+
+				var remove_tooltip = function()
+				{
+					tooltip.animate( { top: '-=10', opacity: 0 }, 50, function()
+					{
+						jQuery( this ).remove();
+					});
+
+					target.attr( 'title', tip );
+				};
+
+				target.bind( 'mouseleave', remove_tooltip );
+				tooltip.bind( 'click', remove_tooltip );
+			});
+		});
+	//]]>
+	</script>
+
+										<div class="product-right-bottom-wrapper">
+						<div class="product-shipping-form">	
+														<div class="item"><em class="fa-fw fa fa-truck"></em><strong><span class="heading">Shipping cost is $9.90 (flat rate) for any size order.</span></strong></div>
+<div class="item"><em class="fa-fw fa fa-thumbs-o-up"></em><span class="heading">This product is covered by an Australian Replacement Warranty.</span></div>
+<div class="item"><em class="fa-fw fa fa-thumbs-o-up"></em><span class="heading">30 Days Money Back Guarantee. <a href="http://web.archive.org/web/20170419214540/http://support.macfixit.com.au/article/48-30-day-money-back-guarantee" target="_blank">Click here</a> for more details.</span></div>												</div>
+					</div>
+					 
+					<p class="pro-code">Product code: 15122</p>
+                    						<p class="no-rating"><a class="goto-reviews" onclick="goreview(jQuery(this))">Be the first to review this product</a></p>
+                        						
+
+			
+				<div class="box-brand">
+							<a href="http://web.archive.org/web/20170419214540/https://www.macfixit.com.au/brand//monoprice" title="Click to see more products from Monoprice"><img src="http://web.archive.org/web/20170419214540im_/https://da7rxrcpfujl4.cloudfront.net/media/infortis/attributes/manufacturer/monoprice.png" alt="Monoprice" width="210" height="50"></a>
+					</div>
+
+						 
+                        <div class="short-description">
+                            <h2>Highlights</h2>
+
+                            <div class="std">Monoprice's Select Series Power Bank provides the power you need to keep your devices charged on the go.                             </div>
+                        </div>
+                    
+                    					<div class="bws_social_share">					
+											</div>
+															
+					<div class="pro-view-wishlist">
+						<a href="http://web.archive.org/web/20170419214540/https://www.macfixit.com.au/wishlist/index/add/product/27804/form_key/ird8qGmSctHuJxGZ/" class="wishlist">Add to Wishlist						</a>
+						
+					</div>
+                </div>

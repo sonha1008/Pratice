@@ -1,10 +1,10 @@
 <page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
     <body>
 		<!--  delete block trong header-->
-    	<referenceBlock name="my-account-link" remove="true"/>
-    	<referenceBlock name="authorization-link" remove="true"/>
-    	<referenceBlock name="register-link" remove="true"/>
-    	<referenceBlock name="top.links" remove="true"/>
+    	<!-- <referenceBlock name="my-account-link" remove="true"/>
+        <referenceBlock name="authorization-link" remove="true"/>
+        <referenceBlock name="register-link" remove="true"/>
+        <referenceBlock name="top.links" remove="true"/> -->
 
         <!-- insert header-contact -->
         <referenceContainer name="header-wrapper">
@@ -35,24 +35,24 @@
             </block>
         </referenceContainer>
         <!-- create cacs block trong block header-links -->
-        <referenceBlock name="header.links">
-        	<block class="Magento\Framework\View\Element\Html\Link" name="aboutus-link">
-	            <arguments>
-	              <argument name="label" xsi:type="string" translate="true">Abount Us</argument>
-	            </arguments>
-	        </block>
-	        <block class="Magento\Framework\View\Element\Html\Link" name="My-account-links">
-	            <arguments>
-	              <argument name="label" xsi:type="string" translate="true">My Account</argument>
-	            </arguments>
-	        </block>
-          	<block class="Magento\Framework\View\Element\Html\Link" name="blog-link">
-	            <arguments>
-	              <argument name="label" xsi:type="string" translate="true">Blog</argument>
-	              <argument name="path" xsi:type="string" translate="true">Blog</argument>
-	            </arguments>
-          	</block>
-        </referenceBlock>
+      <!--   <referenceBlock name="header.links">
+          <block class="Magento\Framework\View\Element\Html\Link" name="aboutus-link">
+                      <arguments>
+                        <argument name="label" xsi:type="string" translate="true">Abount Us</argument>
+                      </arguments>
+                  </block>
+                  <block class="Magento\Framework\View\Element\Html\Link" name="My-account-links">
+                      <arguments>
+                        <argument name="label" xsi:type="string" translate="true">My Account</argument>
+                      </arguments>
+                  </block>
+            <block class="Magento\Framework\View\Element\Html\Link" name="blog-link">
+                      <arguments>
+                        <argument name="label" xsi:type="string" translate="true">Blog</argument>
+                        <argument name="path" xsi:type="string" translate="true">Blog</argument>
+                      </arguments>
+            </block>
+      </referenceBlock> -->
         <referenceContainer name="footer-container">
             	<block class="Son\HelloWorld\Block\HelloWorld" name="footer-links" template="footer-links.phtml" />
         </referenceContainer>
