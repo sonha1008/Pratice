@@ -32,12 +32,12 @@ class Index extends \Magento\Framework\App\Action\Action
         $this->_view->loadLayout();
         $this->_view->getLayout()->initMessages();
         $this->_view->renderLayout();*/
-        $debugBackTrace = debug_backtrace(DEBUG_BACKTRACE_IGNORE_ARGS);
+        /*$debugBackTrace = debug_backtrace(DEBUG_BACKTRACE_IGNORE_ARGS);
         foreach ($debugBackTrace as $item) {
             echo @$item['class'] . @$item['type'] . @$item['function'] . "<br>";
         }
         print_r($this);
-        die();
+        die();*/
         $resultPage = $this->_resultPageFactory->create();
         return $resultPage;
     }

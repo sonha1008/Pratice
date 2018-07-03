@@ -1,74 +1,99 @@
 <page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
     <body>
-		<!--  delete block trong header-->
-    	<!-- <referenceBlock name="my-account-link" remove="true"/>
-        <referenceBlock name="authorization-link" remove="true"/>
-        <referenceBlock name="register-link" remove="true"/>
-        <referenceBlock name="top.links" remove="true"/> -->
+		<!-- delete block trong header
+                <referenceBlock name="my-account-link" remove="true"/>
+                <referenceBlock name="authorization-link" remove="true"/>
+                <referenceBlock name="register-link" remove="true"/>
+                <referenceBlock name="top.links" remove="true"/>
+        
+                insert header-contact
+                <referenceContainer name="header-wrapper">
+                        <block class="Son\HelloWorld\Block\HelloWorld" name="header-contact" template="header-contact.phtml" />
+                </referenceContainer>
+        
+                Delete columns 3
+                <referenceBlock name="advanced-search-link" remove="true"/>
+                <referenceBlock name="catalog.compare.sidebar" remove="true"/>
+                <referenceBlock name="wishlist_sidebar" remove="true"/>
+        
+                chuyeenr ddeens column 3
+                <move element="product.price.final" destination="div.sidebar.additional" as="final" after="sku"/>
+                <move element="product.info.simple" destination="div.sidebar.additional" as="info_sp" after="final"/>
+                <move element="product.info" destination="div.sidebar.additional" as="info_pr" after="info_sp"/>
+                <move element="product.info.addto" destination="div.sidebar.additional" as="info_addto" after="info_pr"/>
+                <move element="product.info.social" destination="div.sidebar.additional" as="info_social" after="info_addto"/>
+                <move element="product.info.overview" destination="div.sidebar.additional" as="info_overview" after="info_social"/>
+                <move element="product.info.review" destination="div.sidebar.additional" as="info_review" after="info_social"/>
+                <move element="product.info.stock.sku" destination="div.sidebar.additional" as="sku" before="-"/>
+        
+        create block header links
+        <referenceContainer name="header.panel">
+                    <block class="Magento\Framework\View\Element\Html\Links" name="header.links">
+                        <arguments>
+                            <argument name="css_class" xsi:type="string">header links</argument>
+                        </arguments>
+                    </block>
+                </referenceContainer>
+                create cacs block trong block header-links
+              <referenceBlock name="header.links">
+                  <block class="Magento\Framework\View\Element\Html\Link" name="aboutus-link">
+                              <arguments>
+                                <argument name="label" xsi:type="string" translate="true">Abount Us</argument>
+                              </arguments>
+                          </block>
+                          <block class="Magento\Framework\View\Element\Html\Link" name="My-account-links">
+                              <arguments>
+                                <argument name="label" xsi:type="string" translate="true">My Account</argument>
+                              </arguments>
+                          </block>
+                    <block class="Magento\Framework\View\Element\Html\Link" name="blog-link">
+                              <arguments>
+                                <argument name="label" xsi:type="string" translate="true">Blog</argument>
+                                <argument name="path" xsi:type="string" translate="true">Blog</argument>
+                              </arguments>
+                    </block>
+              </referenceBlock>
+                <referenceContainer name="footer-container">
+                        <block class="Son\HelloWorld\Block\HelloWorld" name="footer-links" template="footer-links.phtml" />
+                </referenceContainer>
+        
+                Xoa block footer
+                <referenceBlock name="footer_links" remove="true"/>
+                <referenceBlock name="report.bugs" remove="true"/>
+                <referenceBlock name="form.subscribe" remove="true"/>
+                <referenceBlock name="copyright" remove="true"/>
+                <referenceBlock name="logo">
+                    <arguments>
+                        <argument name="logo_file" xsi:type="string">images/logo_macfixit.png</argument>
+                        <argument name="logo_img_width" xsi:type="number">300</argument>
+                        <argument name="logo_img_height" xsi:type="number">300</argument>
+                    </arguments>
+                </referenceBlock>
+        
+         -->
 
-        <!-- insert header-contact -->
-        <referenceContainer name="header-wrapper">
-                <block class="Son\HelloWorld\Block\HelloWorld" name="header-contact" template="header-contact.phtml" />
-        </referenceContainer>
-
-        <!-- Delete columns 3 -->
-        <referenceBlock name="advanced-search-link" remove="true"/>
-        <referenceBlock name="catalog.compare.sidebar" remove="true"/>
-        <referenceBlock name="wishlist_sidebar" remove="true"/>
-
-        <!-- chuyeenr ddeens column 3 -->
-        <move element="product.price.final" destination="div.sidebar.additional" as="final" after="sku"/>
-        <move element="product.info.simple" destination="div.sidebar.additional" as="info_sp" after="final"/>
-        <move element="product.info" destination="div.sidebar.additional" as="info_pr" after="info_sp"/>
-        <move element="product.info.addto" destination="div.sidebar.additional" as="info_addto" after="info_pr"/>
-        <move element="product.info.social" destination="div.sidebar.additional" as="info_social" after="info_addto"/>
-        <move element="product.info.overview" destination="div.sidebar.additional" as="info_overview" after="info_social"/>
-        <move element="product.info.review" destination="div.sidebar.additional" as="info_review" after="info_social"/>
-        <move element="product.info.stock.sku" destination="div.sidebar.additional" as="sku" before="-"/>
-
-		<!-- create block header links -->
-		<referenceContainer name="header.panel">
+        <!-- Customizing layout illustration-->
+        <referenceContainer name="header.panel">
             <block class="Magento\Framework\View\Element\Html\Links" name="header.links">
                 <arguments>
                     <argument name="css_class" xsi:type="string">header links</argument>
                 </arguments>
             </block>
         </referenceContainer>
-        <!-- create cacs block trong block header-links -->
-      <!--   <referenceBlock name="header.links">
-          <block class="Magento\Framework\View\Element\Html\Link" name="aboutus-link">
-                      <arguments>
-                        <argument name="label" xsi:type="string" translate="true">Abount Us</argument>
-                      </arguments>
-                  </block>
-                  <block class="Magento\Framework\View\Element\Html\Link" name="My-account-links">
-                      <arguments>
-                        <argument name="label" xsi:type="string" translate="true">My Account</argument>
-                      </arguments>
-                  </block>
-            <block class="Magento\Framework\View\Element\Html\Link" name="blog-link">
-                      <arguments>
-                        <argument name="label" xsi:type="string" translate="true">Blog</argument>
-                        <argument name="path" xsi:type="string" translate="true">Blog</argument>
-                      </arguments>
-            </block>
-      </referenceBlock> -->
-        <referenceContainer name="footer-container">
-            	<block class="Son\HelloWorld\Block\HelloWorld" name="footer-links" template="footer-links.phtml" />
-        </referenceContainer>
 
-        <!-- Xoa block footer -->
-        <referenceBlock name="footer_links" remove="true"/>
-        <referenceBlock name="report.bugs" remove="true"/>
-        <referenceBlock name="form.subscribe" remove="true"/>
-        <referenceBlock name="copyright" remove="true"/>
-        <referenceBlock name="logo">
-            <arguments>
-                <argument name="logo_file" xsi:type="string">images/logo_macfixit.png</argument>
-                <argument name="logo_img_width" xsi:type="number">300</argument>
-                <argument name="logo_img_height" xsi:type="number">300</argument>
-            </arguments>
-        </referenceBlock>
+        <referenceBlock name="header.links">
+                <block class="Magento\Customer\Block\Account\Customer" name="customer" template="account/customer.phtml" before="-"/>
+                <block class="Magento\Customer\Block\Account\AuthorizationLink" name="authorization-link-login" template="account/link/authorization.phtml"/>
+            </referenceBlock>
+            <block class="Magento\Theme\Block\Html\Header" name="header" as="header">
+                <arguments>
+                    <argument name="show_part" xsi:type="string">welcome</argument>
+                </arguments>
+            </block>
+            <move element="header" destination="header.links" before="-"/>
+            <move element="register-link" destination="header.links"/>
+            <move element="top.links" destination="customer"/>
+            <move element="authorization-link" destination="top.links" after="-"/>
     </body>
 </page>
 

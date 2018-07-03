@@ -20,9 +20,9 @@ class CustomerLogin implements ObserverInterface
         $data[] = $customer_name;
         $data[] = $customer_email;
         $this->_logger->addInfo('Info Customer',$data);
-        echo "Customer LoggedIn<br>";
+       /* echo "Customer LoggedIn<br>";
         echo $customer_name."<br>";
         echo $customer_email; //Get customer name
-        exit;
+        exit;*/
     }
 }
