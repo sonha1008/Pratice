@@ -9,4 +9,5 @@
     <event name="customer_login">
         <observer name="customer_login" instance="Observer\Observerlogs\Observer\CustomerLogin" />
     </event>
+    
 </config>

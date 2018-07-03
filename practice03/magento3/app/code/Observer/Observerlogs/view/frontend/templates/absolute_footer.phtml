@@ -1,0 +1,15 @@
+<?php
+/**
+ */
+
+?>
+<div class="absolute-footer" style="text-align:center;">
+    <p>
+   		 <?php echo $block->getNameInLayout() ?>
+    </p>
+    <p>
+        <?php if (!$customer->isEmpty()) echo 'Ban da dang nhap !!!!'; ?>
+    </p>
+    <?php
+    echo $block->getMiscellaneousHtml(); ?>
+</div>
