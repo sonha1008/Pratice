@@ -1,0 +1,8 @@
+<h1><?php echo __('latest blog posts'); ?></h1>
+<ul>
+	<?php foreach ($block->getPosts() as $post) { ?>
+	<li>
+		<h3><a href="<?php echo $post->getUrl(); ?>"><?php echo $post->getTitle(); ?></a></h3>
+	</li>
+	<?php } ?>
+</ul>

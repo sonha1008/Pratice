@@ -148,6 +148,7 @@ return [
     'Mageplaza_Core' => 1,
     'Mgt_DeveloperToolbar' => 1,
     'Observer_Observerlogs' => 1,
+    'OpenTechiz_Blog' => 1,
     'Shopial_Facebook' => 1,
     'Son_HelloWorld' => 1,
     'Temando_Shipping' => 1,
