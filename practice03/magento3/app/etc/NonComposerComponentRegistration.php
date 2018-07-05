@@ -3,7 +3,6 @@
  * Copyright © Magento, Inc. All rights reserved.
  * See COPYING.txt for license details.
  */
-
 $pathList[] = dirname(__DIR__) . '/code/*/*/cli_commands.php';
 $pathList[] = dirname(__DIR__) . '/code/*/*/registration.php';
 $pathList[] = dirname(__DIR__) . '/design/*/*/*/registration.php';
