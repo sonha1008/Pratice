@@ -28,7 +28,14 @@ class Post  extends \Magento\Framework\Model\AbstractModel implements PostInterf
      * @var \Magento\Framework\UrlInterface
      */
     protected $_urlBuilder;
-
+    /**
+     * @param \Magento\Framework\Model\Context $context
+     * @param \Magento\Framework\Registry $registry
+     * @param \Magento\Framework\Model\ResourceModel\AbstractResource|null $resource
+     * @param \Magento\Framework\Data\Collection\AbstractDb|null $resourceCollection
+     * @param \Magento\Framework\UrlInterface $urlBuilder
+     * @param array $data
+     */
     function __construct(
         \Magento\Framework\Model\Context $context,
         \Magento\Framework\Registry $registry,
