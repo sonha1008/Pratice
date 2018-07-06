@@ -1,0 +1,16 @@
+<?php /* @var $block \Ashsmith\Blog\Block\PostList */ ?>
+<ul class="blog-post-list">
+    <?php echo __('Post ID LA :   ') . $block->getPostID() ?>
+    <?php foreach ($block->getComments() as $comment): ?>
+        <li class="blog-post-list-item">
+            <h3 class="blog-post-item-content"><?php echo __('User ID LA :   ') .$comment->getUserId() ?></h3>
+            <div class="blog-post-item-content">
+                <?php echo $comment->getComment(); ?>
+            </div>
+
+            <div class="blog-post-item-meta">
+                <strong><?php echo __('Created at:') ?></strong> <?php echo $comment->getCreationTime() ?>
+            </div>
+        </li>
+    <?php endforeach; ?>
+</ul>

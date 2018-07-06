@@ -27,10 +27,6 @@ class PostView extends \Magento\Framework\View\Element\Template implements
      */
     public function getPost()
     {
-        // Check if posts has already been defined
-        // makes our block nice and re-usable! We could
-        // pass the 'posts' data to this block, with a collection
-        // that has been filtered differently!
         if (!$this->hasData('post')) {
             if ($this->getPostId()) {
                 /** @var \OpenTechiz\Blog\Model\Post $page */
@@ -42,6 +38,14 @@ class PostView extends \Magento\Framework\View\Element\Template implements
         }
         return $this->getData('post');
     }
+    public function _prepareLayout()
+    {
+       //set page title
+        $post = $this->getPost();
+       $this->pageConfig->getTitle()->set(__($post->getTitle()));
+       return parent::_prepareLayout();
+    }
+
     /**
      * Return identifiers for produced content
      *
