@@ -192,12 +192,6 @@ class Comment  extends \Magento\Framework\Model\AbstractModel implements Comment
     {
         return $this->setData(self::COMMENT, $comment);
     }
-
-    function getUrl(){
-        $objectManager = \Magento\Framework\App\ObjectManager::getInstance();
-        $urlBuilder=$objectManager->get("Magento\Framework\UrlInterface");
-        return $urlBuilder->getUrl("blog/".$this->getUrlKey());
-    }
     /**
      * Set creation time
      *
