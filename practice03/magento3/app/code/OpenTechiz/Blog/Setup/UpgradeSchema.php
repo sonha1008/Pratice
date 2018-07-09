@@ -49,6 +49,19 @@ class UpgradeSchema implements UpgradeSchemaInterface
 			'Comment Content'
 			)
 		->addColumn(
+			'email',
+			Table::TYPE_TEXT,
+			'2M',
+			[], 
+			'email'
+			)
+		->addColumn(
+			'pending',
+			Table::TYPE_SMALLINT,
+			[], 
+			'Pending'
+			)
+		->addColumn(
 			'creation_time', 
 			Table::TYPE_DATETIME, null , 
 			['nullable' => false], 
