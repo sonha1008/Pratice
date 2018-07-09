@@ -1,4 +1,19 @@
-<?xml version="1.0"?>
+<!-- <?xml version="1.0"?>
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <update handle="styles"/>
+    <body>
+        <referenceContainer name="content">
+            <uiComponent name="blog_post_form"/>
+        </referenceContainer>
+    </body>
+</page>
+ -->
+
+ <?xml version="1.0"?>
 <!--
 /**
  * Copyright © 2015 Magento. All rights reserved.
@@ -9,7 +24,7 @@
     <update handle="editor"/>
     <body>
         <referenceContainer name="content">
-            <block class="OpenTechiz\Blog\Block\Adminhtml\Post\Edit" name="blog_post_edit"/>
+            <block class="Ashsmith\Blog\Block\Adminhtml\Post\Edit" name="blog_post_edit"/>
         </referenceContainer>
     </body>
 </page>
