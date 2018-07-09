@@ -128,6 +128,17 @@ class Comment  extends \Magento\Framework\Model\AbstractModel implements Comment
     {
         return $this->getData(self::COMMENT);
     }
+
+    public function getEmail()
+    {
+        return $this->getData(self::EMAIL);
+    }
+
+
+    public function getPending()
+    {
+        return $this->getData(self::PENDING);
+    }
     /**
      * Get creation time
      *
@@ -191,6 +202,16 @@ class Comment  extends \Magento\Framework\Model\AbstractModel implements Comment
     public function setComment($comment)
     {
         return $this->setData(self::COMMENT, $comment);
+    }
+
+    public function setEmail($email)
+    {
+        return $this->setData(self::EMAIL, $email);
+    }
+
+     public function setPending($pending)
+    {
+        return $this->setData(self::PENDING, $pending);
     }
     /**
      * Set creation time

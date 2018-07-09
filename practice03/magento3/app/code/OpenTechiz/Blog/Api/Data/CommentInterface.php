@@ -9,6 +9,8 @@ interface CommentInterface
     const USER_ID       = 'user_id';
     const POST_ID         = 'post_id';
     const COMMENT       = 'comment';
+    const EMAIL         = 'email';
+    const PENDING       = 'pending';
     const CREATION_TIME = 'creation_time';
     const UPDATE_TIME   = 'update_time';
     /**
@@ -35,9 +37,16 @@ interface CommentInterface
     public function getComment();
     /**
      * Get creation time
+     * 
+     * @return string
+     */
+    public function getEmail();
+    /**
      *
      * @return string|null
      */
+    public function getPending();
+
     public function getCreationTime();
     /**
      * Get update time
@@ -83,6 +92,9 @@ interface CommentInterface
      * @param string $content
      * @return \OpenTechiz\Blog\Api\Data\PostInterface
      */
+    public function setEmail($email);
+
+    public function setPending($pending);
     /**
      * Set creation time
      *
