@@ -5,9 +5,13 @@
         <li class="blog-post-list-item">
             <h3 class="blog-post-item-content"><?php echo __('User ID LA :   ') .$comment->getUserId() ?></h3>
             <div class="blog-post-item-content">
+            <strong><?php echo __('Content:') ?></strong>
                 <?php echo $comment->getComment(); ?>
             </div>
-
+            <div class="blog-post-item-email">
+            <strong><?php echo __('Email:') ?></strong>
+               <?php echo $comment->getEmail() ?>
+            </div>
             <div class="blog-post-item-meta">
                 <strong><?php echo __('Created at:') ?></strong> <?php echo $comment->getCreationTime() ?>
             </div>
