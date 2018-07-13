@@ -1,5 +1,5 @@
 <?php
-namespace OpenTechiz\Blog\Controller\Adminhtml\Post;
+namespace OpenTechiz\Blog\Controller\Adminhtml\Comment;
 use Magento\Backend\App\Action;
 use Magento\TestFramework\ErrorLog\Logger;
 class Delete extends \Magento\Backend\App\Action
@@ -12,11 +12,11 @@ class Delete extends \Magento\Backend\App\Action
    
     public function execute()
     {
-        $id = $this->getRequest()->getParam('post_id');
+        $id = $this->getRequest()->getParam('comment_id');
         $resultRedirect = $this->resultRedirectFactory->create();
         if ($id) {
             try {
-                $model = $this->_objectManager->create('OpenTechiz\Blog\Model\Post');
+                $model = $this->_objectManager->create('OpenTechiz\Blog\Model\Comment');
                 $model->load($id);
                 $model->delete();
                 $this->messageManager->addSuccess(__('The post has been deleted.'));

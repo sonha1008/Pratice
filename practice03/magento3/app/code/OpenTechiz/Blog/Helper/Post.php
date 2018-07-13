@@ -3,22 +3,11 @@ namespace OpenTechiz\Blog\Helper;
 use Magento\Framework\App\Action\Action;
 class Post extends \Magento\Framework\App\Helper\AbstractHelper
 {
-    /**
-     * @var \OpenTechiz\Blog\Model\Post
-     */
+ 
     protected $_post;
-    /**
-     * @var \Magento\Framework\View\Result\PageFactory
-     */
+   
     protected $resultPageFactory;
-    /**
-     * Constructor
-     *
-     * @param \Magento\Framework\App\Helper\Context $context
-     * @param \OpenTechiz\Blog\Model\Post $post
-     * @param \Magento\Framework\View\Result\PageFactory $resultPageFactory
-     * @SuppressWarnings(PHPMD.ExcessiveParameterList)
-     */
+  
     public function __construct(
         \Magento\Framework\App\Helper\Context $context,
         \OpenTechiz\Blog\Model\Post $post,
@@ -29,13 +18,7 @@ class Post extends \Magento\Framework\App\Helper\AbstractHelper
         $this->resultPageFactory = $resultPageFactory;
         parent::__construct($context);
     }
-    /**
-     * Return a blog post from given post id.
-     *
-     * @param Action $action
-     * @param null $postId
-     * @return \Magento\Framework\View\Result\Page|bool
-     */
+    
     public function prepareResultPost(Action $action, $postId = null)
     {
         if ($postId !== null && $postId !== $this->_post->getId()) {

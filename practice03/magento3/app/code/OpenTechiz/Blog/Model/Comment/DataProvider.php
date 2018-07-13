@@ -1,8 +1,8 @@
 <?php
 
-namespace OpenTechiz\Blog\Model\Post;
+namespace OpenTechiz\Blog\Model\Comment;
 
-use OpenTechiz\Blog\Model\ResourceModel\Post\CollectionFactory;
+use OpenTechiz\Blog\Model\ResourceModel\Comment\CollectionFactory;
 use Magento\Framework\App\Request\DataPersistorInterface;
 
 
@@ -19,12 +19,12 @@ class DataProvider extends \Magento\Ui\DataProvider\AbstractDataProvider
         $name,
         $primaryFieldName,
         $requestFieldName,
-        CollectionFactory $PostCollectionFactory,
+        CollectionFactory $CommentCollectionFactory,
         DataPersistorInterface $dataPersistor,
         array $meta = [],
         array $data = []
     ) {
-        $this->collection = $PostCollectionFactory->create();
+        $this->collection = $CommentCollectionFactory->create();
         $this->dataPersistor = $dataPersistor;
         parent::__construct($name, $primaryFieldName, $requestFieldName, $meta, $data);
         $this->meta = $this->prepareMeta($this->meta);
@@ -42,17 +42,17 @@ class DataProvider extends \Magento\Ui\DataProvider\AbstractDataProvider
             return $this->loadedData;
         }
         $items = $this->collection->getItems();
-        /** @var $Post \OpenTechiz\Blog\Model\Post */
-        foreach ($items as $Post) {
-            $this->loadedData[$Post->getId()] = $Post->getData();
+        /** @var $Comment \OpenTechiz\Blog\Model\Comment */
+        foreach ($items as $Comment) {
+            $this->loadedData[$Comment->getId()] = $Comment->getData();
         }
 
-        $data = $this->dataPersistor->get('blog_post');
+        $data = $this->dataPersistor->get('blog_comment');
         if (!empty($data)) {
-            $Post = $this->collection->getNewEmptyItem();
-            $Post->setData($data);
-            $this->loadedData[$Post->getId()] = $Post->getData();
-            $this->dataPersistor->clear('blog_post');
+            $Comment = $this->collection->getNewEmptyItem();
+            $Comment->setData($data);
+            $this->loadedData[$Comment->getId()] = $Comment->getData();
+            $this->dataPersistor->clear('blog_comment');
         }
 
         return $this->loadedData;

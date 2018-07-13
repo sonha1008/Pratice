@@ -1,5 +1,5 @@
 <?php
-namespace OpenTechiz\Blog\Controller\Adminhtml\Post;
+namespace OpenTechiz\Blog\Controller\Adminhtml\Comment;
 use Magento\Backend\App\Action\Context;
 use Magento\Framework\View\Result\PageFactory;
 class Index extends \Magento\Backend\App\Action
@@ -18,15 +18,15 @@ class Index extends \Magento\Backend\App\Action
     public function execute()
     {
         $resultPage = $this->resultPageFactory->create();
-        $resultPage->setActiveMenu('OpenTechiz_Blog::post');
-        $resultPage->addBreadcrumb(__('Blog Posts'), __('Blog Posts'));
-        $resultPage->addBreadcrumb(__('Manage Blog Posts'), __('Manage Blog Posts'));
-        $resultPage->getConfig()->getTitle()->prepend(__('Blog Posts'));
+        $resultPage->setActiveMenu('OpenTechiz_Blog::comment');
+        $resultPage->addBreadcrumb(__('Blog Comments'), __('Blog Comments'));
+        $resultPage->addBreadcrumb(__('Manage Blog Comments'), __('Manage Blog Comments'));
+        $resultPage->getConfig()->getTitle()->prepend(__('Blog Comments'));
         return $resultPage;
     }
 
     protected function _isAllowed()
     {
-        return $this->_authorization->isAllowed('OpenTechiz_Blog::post');
+        return $this->_authorization->isAllowed('OpenTechiz_Blog::comment');
     }
 }

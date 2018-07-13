@@ -8,9 +8,6 @@ use \Magento\Framework\View\Result\PageFactory;
 
 class Save extends Action
 {
-    /**
-     * @var \Magento\Framework\View\Result\PageFactory
-     */
     protected $_resultPageFactory;
     protected $resultPageFactory;
     protected $resultJsonFactory;

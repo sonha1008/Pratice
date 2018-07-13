@@ -1,8 +1,8 @@
 <?php
-namespace OpenTechiz\Blog\Controller\Adminhtml\Post;
+namespace OpenTechiz\Blog\Controller\Adminhtml\Comment;
 use Magento\Backend\App\Action\Context;
 use Magento\Ui\Component\MassAction\Filter;
-use OpenTechiz\Blog\Model\ResourceModel\Post\CollectionFactory;
+use OpenTechiz\Blog\Model\ResourceModel\Comment\CollectionFactory;
 use Magento\Framework\Controller\ResultFactory;
 
 class MassDelete  extends \Magento\Backend\App\Action

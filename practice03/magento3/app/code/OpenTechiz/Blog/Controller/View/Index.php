@@ -3,11 +3,9 @@ namespace OpenTechiz\Blog\Controller\View;
 use \Magento\Framework\App\Action\Action;
 class Index extends Action
 {
-    /** @var \Magento\Framework\Controller\Result\ForwardFactory */
+
     protected $resultForwardFactory;
-    /**
-     * @param \Magento\Framework\App\Action\Context $context
-     */
+  
     public function __construct(\Magento\Framework\App\Action\Context $context,
                                 \Magento\Framework\Controller\Result\ForwardFactory $resultForwardFactory
     )
@@ -15,11 +13,7 @@ class Index extends Action
         $this->resultForwardFactory = $resultForwardFactory;
         parent::__construct($context);
     }
-    /**
-     * Blog Index, shows a list of recent blog posts.
-     *
-     * @return \Magento\Framework\View\Result\PageFactory
-     */
+  
     public function execute()
     {
         $post_id = $this->getRequest()->getParam('post_id', $this->getRequest()->getParam('id', false));

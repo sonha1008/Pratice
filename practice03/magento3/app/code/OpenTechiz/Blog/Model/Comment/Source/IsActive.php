@@ -1,19 +1,19 @@
 <?php
-namespace OpenTechiz\Blog\Model\Post\Source;
+namespace OpenTechiz\Blog\Model\Comment\Source;
 class IsActive implements \Magento\Framework\Data\OptionSourceInterface
 {
  
-    protected $Post;
+    protected $Comment;
    
-    public function __construct(\OpenTechiz\Blog\Model\Post $Post)
+    public function __construct(\OpenTechiz\Blog\Model\Comment $Comment)
     {
-        $this->Post = $Post;
+        $this->Comment = $Comment;
     }
     
     public function toOptionArray()
     {
         $options[] = ['label' => '', 'value' => ''];
-        $availableOptions = $this->Post->getAvailableStatuses();
+        $availableOptions = $this->Comment->getAvailableStatuses();
         foreach ($availableOptions as $key => $value) {
             $options[] = [
                 'label' => $value,
