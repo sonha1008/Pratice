@@ -18,7 +18,7 @@ class UpgradeSchema implements UpgradeSchemaInterface
 		$installer->startSetup();
 
 		//create comment table
-		$table = $installer->getConnection()
+		/*$table = $installer->getConnection()
 		->newTable($installer->getTable('opentechiz_blog_comment'))
 		->addColumn(
 			'comment_id',
@@ -70,7 +70,52 @@ class UpgradeSchema implements UpgradeSchemaInterface
 			Table::TYPE_DATETIME, 
 			null, 
 			['nullable' =>false], 
-			'Update Time');
+			'Update Time');*/
+
+
+			//create notification table
+			$table = $installer->getConnection()
+		->newTable($installer->getTable('opentechiz_blog_notification'))
+		->addColumn(
+			'noti_id',
+			Table::TYPE_SMALLINT,
+			null,
+			['identity' => true, 'nullable' => false, 'primary' => true],
+			'Notification_ID'
+			)
+		->addColumn(
+			'user_id',
+			Table::TYPE_SMALLINT,
+			null,
+			['nullable' => false],
+			'User_ID'
+			)
+		->addColumn(
+			'post_id',
+			Table::TYPE_SMALLINT,
+			null,
+			['nullable' => false],
+			'Post_ID'
+			)
+		->addColumn(
+			'comment_id',
+			Table::TYPE_SMALLINT,
+			null,
+			['nullable' => false],
+			'Comment_ID'
+			)
+		->addColumn(
+			'content', 
+			Table::TYPE_TEXT, 255, 
+			['nullable' => false],
+			'Content'
+			)
+		->addColumn(
+			'creation_time', 
+			Table::TYPE_DATETIME, null , 
+			['nullable' => false], 
+			'Creation Time');
+			
 		$installer->getConnection() -> createTable($table);
 		$installer->endSetup();
 	}
